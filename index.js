@@ -33,16 +33,16 @@ mortgageAmt.addEventListener("input", function (e) {
     poundsPlaceholder.style.color = "black";
   }
   if (mortgageAmtValue.length === 0 || isNaN(mortgageAmtValue)) {
-    poundsInput.style.border = "1px solid red";
+    poundsInput.style.border = "1px solid hsl(4, 69% ,50%)";
     amountError.textContent = "This field is required";
-    amountError.style.color = "red";
-    poundsInput.style.border = "1px solid red";
+    amountError.style.color = "hsl(4, 69% ,50%)";
+    poundsInput.style.border = "1px solid hsl(4, 69% ,50%)";
   }
   if (isNaN(mortgageAmtValue)) {
-    poundsInput.style.border = "1px solid red";
+    poundsInput.style.border = "1px solid hsl(4, 69% ,50%)";
     amountError.textContent = "Must be a number";
-    amountError.style.color = "red";
-    poundsInput.style.border = "1px solid red";
+    amountError.style.color = "hsl(4, 69% ,50%)";
+    poundsInput.style.border = "1px solid hsl(4, 69% ,50%)";
   } else {
     poundsInput.style.border = "1px solid hsl(202, 55% ,16%)"; //This is the default color given
   }
@@ -60,16 +60,16 @@ mortgageTerm.addEventListener("input", function (e) {
     yearsPlaceholder.style.color = "black";
   }
   if (mortgageTermValueTrim.length === 0 || isNaN(mortgageTermValueTrim)) {
-    yearsInput.style.border = "1px solid red";
+    yearsInput.style.border = "1px solid hsl(4, 69% ,50%)";
     interestError.textContent = "This field is required";
-    interestError.style.color = "red";
-    yearsInput.style.border.color = "1px solid red";
+    interestError.style.color = "hsl(4, 69% ,50%)";
+    yearsInput.style.border.color = "1px solid hsl(4, 69% ,50%)";
   }
   if (isNaN(mortgageTermValueTrim)) {
-    yearsInput.style.border = "1px solid red";
+    yearsInput.style.border = "1px solid hsl(4, 69% ,50%)";
     interestError.textContent = "Must be a number";
-    interestError.style.color = "red";
-    yearsInput.style.border = "1px solid red";
+    interestError.style.color = "hsl(4, 69% ,50%)";
+    yearsInput.style.border = "1px solid hsl(4, 69% ,50%)";
   } else {
     yearsInput.style.border = "1px solid hsl(202, 55% ,16%)"; //This is the default color given
   }
@@ -87,17 +87,17 @@ interestRate.addEventListener("input", function (e) {
     percentPlaceholder.style.color = "black";
   }
   if (interestRateValueTrim.length === 0) {
-    percentInput.style.border = "1px solid red";
+    percentInput.style.border = "1px solid hsl(4, 69% ,50%)";
     interestRateError.textContent = "This field is required";
-    interestRateError.style.color = "red";
-    interestRateError.style.border = "red";
-    percentInput.style.border = "1px solid red";
+    interestRateError.style.color = "hsl(4, 69% ,50%)";
+    interestRateError.style.border = "hsl(4, 69% ,50%)";
+    percentInput.style.border = "1px solid hsl(4, 69% ,50%)";
   }
   if (isNaN(interestRateValueTrim)) {
-    percentInput.style.border = "1px solid red";
+    percentInput.style.border = "1px solid hsl(4, 69% ,50%)";
     interestRateError.textContent = "Must be a number";
-    interestRateError.style = "red";
-    percentInput.style.border = "1px solid red";
+    interestRateError.style = "hsl(4, 69% ,50%)";
+    percentInput.style.border = "1px solid hsl(4, 69% ,50%)";
   } else {
     percentInput.style.border = "1px solid hsl(202, 55% ,16%)"; //This is the default color given
   }
@@ -105,7 +105,7 @@ interestRate.addEventListener("input", function (e) {
 
 formInput.addEventListener("focus", function (event) {
   if (formInput.value.trim().length < 1 || isNaN(formInput.value.trim())) {
-    formInput.style.border = "1px solid red";
+    formInput.style.border = "1px solid hsl(4, 69% ,50%)";
   }
 });
 
@@ -147,60 +147,60 @@ repaymentButton.addEventListener("click", (e) => {
     repaymentButton.style.color = "grey";
 
     if (!isAmountValid) {
-      poundsPlaceholder.style.backgroundColor = "red";
+      poundsPlaceholder.style.backgroundColor = "hsl(4, 69% ,50%)";
       poundsPlaceholder.style.color = "white";
-      poundsInput.style.border = "1px solid red";
+      poundsInput.style.border = "1px solid hsl(4, 69% ,50%)";
 
       amountError.textContent = "This field is required";
-      amountError.style.color = "red";
+      amountError.style.color = "hsl(4, 69% ,50%)";
       amountError.style.fontSize = "0.85rem";
     }
 
     if (!ismortgageTermValueValid) {
-      yearsPlaceholder.style.backgroundColor = "red";
+      yearsPlaceholder.style.backgroundColor = "hsl(4, 69% ,50%)";
       yearsPlaceholder.style.color = "white";
-      yearsInput.style.border = "1px solid red";
+      yearsInput.style.border = "1px solid hsl(4, 69% ,50%)";
 
       interestError.textContent = "This field is required";
-      interestError.style.color = "red";
+      interestError.style.color = "hsl(4, 69% ,50%)";
       interestError.style.fontSize = "0.85rem";
     }
 
     if (!isinterestRateValueValid) {
-      percentPlaceholder.style.backgroundColor = "red";
+      percentPlaceholder.style.backgroundColor = "hsl(4, 69% ,50%)";
       percentPlaceholder.style.color = "white";
-      percentInput.style.border = "1px solid red";
+      percentInput.style.border = "1px solid hsl(4, 69% ,50%)";
 
       interestRateError.textContent = "This field is required";
-      interestRateError.style.color = "red";
+      interestRateError.style.color = "hsl(4, 69% ,50%)";
       interestRateError.style.fontSize = "0.85rem";
     } else if (
       !isAmountValid &&
       !ismortgageTermValueValid &&
       !isinterestRateValueValid
     ) {
-      poundsPlaceholder.style.backgroundColor = "red";
+      poundsPlaceholder.style.backgroundColor = "hsl(4, 69% ,50%)";
       poundsPlaceholder.style.color = "white";
-      poundsInput.style.border = "1px solid red";
+      poundsInput.style.border = "1px solid hsl(4, 69% ,50%)";
 
-      yearsPlaceholder.style.backgroundColor = "red";
+      yearsPlaceholder.style.backgroundColor = "hsl(4, 69% ,50%)";
       yearsPlaceholder.style.color = "white";
-      yearsInput.style.border = "1px solid red";
+      yearsInput.style.border = "1px solid hsl(4, 69% ,50%)";
 
-      percentPlaceholder.style.backgroundColor = "red";
+      percentPlaceholder.style.backgroundColor = "hsl(4, 69% ,50%)";
       percentPlaceholder.style.color = "white";
-      percentInput.style.border = "1px solid red";
+      percentInput.style.border = "1px solid hsl(4, 69% ,50%)";
 
       amountError.textContent = "This field is required";
-      amountError.style.color = "red";
+      amountError.style.color = "hsl(4, 69% ,50%)";
       amountError.style.fontSize = "0.85rem";
 
       interestError.textContent = "This field is required";
-      interestError.style.color = "red";
+      interestError.style.color = "hsl(4, 69% ,50%)";
       interestError.style.fontSize = "0.85rem";
 
       interestRateError.textContent = "This field is required";
-      interestRateError.style.color = "red";
+      interestRateError.style.color = "hsl(4, 69% ,50%)";
       interestRateError.style.fontSize = "0.85rem";
     }
     return;
