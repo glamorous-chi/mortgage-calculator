@@ -1,0 +1,435 @@
+:root{
+    /* Colors */
+    --clr-primary: 202 86% 94%;
+    --clr-secondary: 202 55% 16%;
+    --clr-secondary-dark: 202 55% 13%;
+    --clr-tertiary: 200 24% 40%;
+    --clr-lime: 61 70% 52%;
+    --clr-red: 4 69% 50%;
+    --clr-white: 0 0% 100%;   
+    --clr-blue-accent: 203 41% 72%;
+    --clr-blue: 200 26% 54%;
+
+    /* Font-Sizes */
+    --fs-100: 1rem;
+    --fs-200: 1.2rem;
+    --fs-300: 1.5rem;
+    --fs-400: 2rem;
+    --fs-900: 3rem;
+
+    /* Font weights */
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+    /* font-family */
+    --ff-primary: "Plus Jakarta Sans", sans-serif;
+}
+
+                            /* Resets */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* All elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body{
+    background: hsl(var(--clr-white));
+    font-family: var(--ff-primary);
+}
+.flex{
+    display: flex;
+    /* gap: 2rem; */
+}
+.flex-justify-between{
+  display: flex;
+  justify-content: space-between;
+}
+.grid{
+    display: grid;
+    gap: 2rem;
+}
+.bg-primary{
+    background: hsl(var(--clr-primary));
+}
+.bg-secondary{
+    background: hsl(var(--clr-secondary));
+}
+.bg-secondary-dark{
+    background: hsl(var(--clr-secondary-dark));
+}
+.bg-white{
+    background: hsl(var(--clr-white));
+}
+.bg-tertiary{
+    background: hsl(var(--clr-tertiary));
+}
+.bg-lime{
+    background: hsl(var(--clr-lime));
+}
+.text-primary{
+    color: hsl(var(--clr-primary));
+}
+.text-secondary{
+    color: hsl(var(--clr-secondary));
+}
+.text-tertiary{
+    color: hsl(var(--clr-tertiary));
+}
+.text-red{
+    color: hsl(var(--clr-red))
+}
+.text-white{
+    color: hsl(var(--clr-white));
+}
+.text-blue-accent{
+    color: hsl(var(--clr-blue-accent));
+}
+.text-blue{
+    color: hsl(var(--clr-blue));
+}
+.text-lime{
+    color: hsl(var(--clr-lime));
+}
+.border-red{
+    border: 1px solid hsl(var(--clr-red));
+}
+.border-primary{
+    border: 1px solid hsl(var(--clr-primary));
+}
+.fw-500{
+  font-weight: var(--fw-500);
+}
+.fw-600{
+  font-weight: var(--fw-600);
+}
+.fw-700{
+  font-weight: var(--fw-700);
+}
+.fs-100{
+  font-size: var(--fs-100);
+}
+.fs-200{
+  font-size: var(--fs-200);
+}
+.fs-300{
+  font-size: var(--fs-300);
+}
+.fs-400{
+  font-size: var(--fs-400);
+}
+.fs-900{
+  font-size: var(--fs-900);
+}
+/* .calculator-page{
+  border-radius: 10px;
+} */
+.underline{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.border-bottom{
+  border-bottom: 1px solid hsl(var(--clr-blue));
+}
+.main-section{
+  display: flex;
+  flex-direction: column;
+}
+.first-section{
+  padding: 2rem;
+  /* background:  red; */
+}
+.second-section{
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  text-align: center;
+  /* display: none; */
+}
+ .third-section{
+  gap: 1.5rem;
+  padding: 1.5rem;
+  display: none;
+ }
+form{
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+label{
+  color: hsl(var(--clr-blue));
+}
+.form-input{
+  border: 1px solid hsl(var(--clr-secondary));
+  border-radius: 4px;
+  overflow: hidden;
+}
+.placeholder{
+  background-color: hsl(var(--clr-primary));
+  padding: 0.7rem;
+}
+.styled-input{
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.custom-radio {
+  display: none;
+}
+
+/* Style the custom label to make it look like a radio button */
+.custom-label {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  /* margin-bottom: 12px; */
+  cursor: pointer;
+  /* font-size: 22px; */
+  user-select: none;
+}
+
+/* Create a custom radio button */
+.custom-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid hsl(var(--clr-secondary));
+}
+/* Style the radio button when checked */
+.custom-radio:checked + .custom-label::before {
+  background-color: white; /* Change color when checked */
+  border: 1px solid hsl(var(--clr-lime));
+}
+
+/* Add the inner circle for the checked radio button */
+.custom-radio:checked + .custom-label::after {
+  content: "";
+  position: absolute;
+  left: 5.5px;
+  top: 5.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: hsl(var(--clr-lime)); /* Color for the inner circle */
+}
+
+/* Style for the label text when radio button is checked */
+.custom-radio:checked + .custom-label {
+  color: #005c89; /* Change text color when checked */
+}
+.first-radio-check{
+  background: hsl(var(--clr-lime)/.3) ;
+}
+.mortgage-interest-div{
+  display: flex;
+  flex-direction: column;
+  /* padding: .5rem 0; */
+  gap: .8rem;
+}
+.second--form > *{
+  border: 1px solid hsl(var(--clr-secondary));
+  padding: .5rem;
+  border-radius: .2rem;
+}
+button{
+  border: 0;
+  background: hsl(var(--clr-lime));
+  display: flex;
+  gap: .5rem;
+  padding: .5rem 1.5rem;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  place-content: center;
+  cursor: pointer;
+}
+.button-div{
+  display: grid;
+}
+.repayments-div{
+  border-radius: 1rem;
+  border-top: .3rem solid hsl(var(--clr-lime));
+  padding: 1rem;
+}
+@media screen and (min-width:34em){
+  body{
+    background: hsl(var(--clr-primary));
+    font-family: var(--ff-primary);
+    display: grid;
+    /* padding: 0 5rem; */
+}
+  .main-section{
+    border-radius:1.5rem;
+  }
+  .main-section > *{
+    flex: 1;
+  }
+  .calculator-page{
+    padding-block: 2.5rem;
+    width: min(90%, 70rem);
+    margin-inline: auto;
+}
+  .second-section{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    /* display: none; */
+  }
+  .third-section{
+    gap: 1.5rem;
+    padding: 2rem;
+    display: none;
+  }
+  .calculator-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mortgage-interest-div{
+    display: flex;
+  }
+  .flex-gap{
+    display: flex;
+    gap: 1rem;
+  }
+  .flex-gap > *{
+    flex: 1;
+  }
+  button{
+    border: 0;
+    background: hsl(var(--clr-lime));
+    display: flex;
+    gap: .5rem;
+    padding: .6rem 1.5rem;
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+    place-content: center;
+  }
+  .button-div{
+    display: block;
+  }
+}
+@media screen and (min-width:54em){
+  body{
+    background: hsl(var(--clr-primary));
+    font-family: var(--ff-primary);
+    display: grid;
+    place-content: center;
+    /* padding: 0 5rem; */
+}
+  .main-section{
+    display: flex;
+    flex-direction: row;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  .main-section > *{
+    flex: 1;
+  }
+  .calculator-page{
+    padding-block: 2rem;
+    width: min(75%, 70rem);
+    margin-inline: auto;
+    /* overflow-y: hidden; */
+    padding-bottom: 5rem;
+}
+  .second-section{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 3rem;
+    display: grid;
+    gap: 1rem;
+    place-content: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    /* display: none; */
+  }
+  .third-section{ 
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 3rem;
+    display: grid;
+    gap: 1rem;
+    padding: 3rem 3rem 4rem 3rem;
+    display: none;
+  }
+  .calculator-heading {
+    display: flex;
+    justify-content: space-between;
+  }
+}

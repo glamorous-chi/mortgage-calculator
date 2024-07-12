@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="">
+  <main class="calculator-page">
+    <div class="main-section bg-white">
+      <div class="first-section">
+        <div class="calculator-heading" style="margin-bottom: 2rem;">
+          <p class="text-secondary fw-600 fs-300">Mortgage Calculator</p>
+          <p class="underline fs-100 text-blue">Clear All</p>
+        </div>
+
+        <form action="" style="padding-bottom: 1rem;" autocomplete="off">
+          <label for="mortgage-amt">Mortgage Amount</label>
+          <div id="pounds-input" class="flex form-input">
+            <span id="pounds-placeholder" class="placeholder">£</span>
+            <input type="text" id="mortgage-amount" name="mortgage-amount" aria-placeholder="0" class="styled-input" autocomplete="off" >
+            <p id="formattedNumber"></p>
+          </div>
+          <span class="error" id="amount-error"></span>
+          <div class="flex-gap">
+              <div class="mortgage-interest-div">
+                  <label for="mortgage-term">Mortgage Term</label>
+                  <div id="years-input" class="flex form-input">
+                    <input type="text" id="mortgage-term" name="mortgage-term" class="styled-input" autocomplete="off">
+                    <span id="years-placeholder" class="placeholder">years</span>
+                  </div>
+                  <span class="error" id="interest-error"></span>
+              </div>  
+              <div class="mortgage-interest-div">
+                  <label for="interest-rate">Interest Rate</label>
+                  <div id="percent-input" class="flex form-input">
+                    <input type="text" id="interest-rate" name="interest-rate" class="styled-input" autocomplete="off">
+                    <span id="percent-placeholder" class="placeholder">%</span>
+                  </div>
+                  <span class="error" id="interest-rate-error"></span>
+              </div>
+          </div>
+      </form>
+        
+        <p for="Mortgage Type" class="text-blue" style="margin-bottom: 1rem;">Mortgage Type</p>
+        <form action="" class="second--form">
+          <div class="first-radio-check" style="padding: 0.7rem;">
+            <input type="radio" id="repayment" name="radio-button" class="custom-radio" checked>
+            <label for="repayment" class="custom-label">Repayment</label>
+          </div>
+          <div class="second-radio-check" style="padding: 0.7rem;">
+            <input type="radio" id="" name="radio-button" class="custom-radio">
+            <label for="interest-only" class="custom-label">Interest Only</label>
+          </div>
+        </form>
+          
+        <div class="button-div">
+          <button id="repayment-button"><img src="./assets/images/icon-calculator.svg" alt="calculator icon"><span class="text-secondary fw-600">Calculate Repayments</span></button>
+        </div>
+      </div>
+
+      
+      <div class="bg-secondary second-section">
+          <div>
+            <img src="./assets/images/illustration-empty.svg" alt="">
+          </div>
+       <p class="text-white fs-200">Results shown here</p>
+       <p class="text-blue fs-100"> Complete the form and click “calculate repayments” to see what 
+        your monthly repayments would be.</p>
+      </div>
+
+      <div class="bg-secondary third-section grid text-white">
+        <p class="text-white fs-300">Your results</p>
+        <p class="text-blue" style="margin-bottom: 2rem;">Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.</p>
+          <div class="bg-secondary-dark repayments-div grid" style="gap: 1rem;">
+            <p class="text-blue">Your monthly repayments</p>
+            <p id="amount" class="text-lime fs-900"></p>
+            <div class="border-bottom"></div>
+            <p class="text-blue">Total you'll repay over the term </p>
+            <p id="total" class="text-white fs-300"></p>
+          </div>
+      </div>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
