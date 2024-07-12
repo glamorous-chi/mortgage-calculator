@@ -27,9 +27,9 @@ let mortgageAmtValue = 0;
 mortgageAmt.addEventListener("input", function (e) {
   mortgageAmtValue = mortgageAmt.value.trim().toLocaleString("en-US");
   if (mortgageAmtValue.length >= 1 && !isNaN(mortgageAmtValue)) {
-    formInput.style.border = "1px solid hsl(202, 55% ,16%)";
+    formInput.style.border = "1px solid hsl(61, 70%, 52%)";
     amountError.innerHTML = "";
-    poundsPlaceholder.style.backgroundColor = "hsl(202,86%,94%)";
+    poundsPlaceholder.style.backgroundColor = "hsl(61, 70%, 52%)";
     poundsPlaceholder.style.color = "black";
   }
   if (mortgageAmtValue.length === 0 || isNaN(mortgageAmtValue)) {
@@ -54,9 +54,9 @@ mortgageTerm.addEventListener("input", function (e) {
   mortgageTermValue = mortgageTermValueTrim * 12;
   // console.log(mortgageTermValue);
   if (mortgageTermValueTrim.length >= 1) {
-    yearsInput.style.border = "1px solid hsl(202, 55% ,16%)";
+    yearsInput.style.border = "1px solid hsl(61, 70%, 52%)";
     interestError.textContent = "";
-    yearsPlaceholder.style.backgroundColor = "hsl(202,86%,94%)";
+    yearsPlaceholder.style.backgroundColor = "hsl(61, 70%, 52%)";
     yearsPlaceholder.style.color = "black";
   }
   if (mortgageTermValueTrim.length === 0 || isNaN(mortgageTermValueTrim)) {
@@ -81,9 +81,9 @@ interestRate.addEventListener("input", function (e) {
   interestRateValue = interestRateValueTrim / (100 * 12);
   // console.log(interestRateValue);
   if (interestRateValueTrim.length >= 1) {
-    percentInput.style.border = "1px solid hsl(202, 55% ,16%)";
+    percentInput.style.border = "1px solid hsl(61, 70%, 52%)";
     interestRateError.textContent = "";
-    percentPlaceholder.style.backgroundColor = "hsl(202,86%,94%)";
+    percentPlaceholder.style.backgroundColor = "hsl(61, 70%, 52%)";
     percentPlaceholder.style.color = "black";
   }
   if (interestRateValueTrim.length === 0) {
